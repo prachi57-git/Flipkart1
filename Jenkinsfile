@@ -14,5 +14,10 @@ pipeline {
 		    steps {
 			
 		sh 'cp target/Flipkart1.war /home/prachi/Documents/devops-folder/apache-tomcat-9.0.76/webapps'
-	}}
-}}
+         	}}
+             stage('slack notification'){
+		    steps {
+			
+			slackSend baseUrl: 'https://hooks.slack.com/services/', channel: '#slack-notifiaction', color: 'good', message: 'Welcome to Jenkins ', teamDomain: 'Devops', tokenCredentialId: 'slack-notify'
+			}}
+        }}
