@@ -8,7 +8,7 @@ pipeline {
 		      }}
 		stage('Build') {
 	           steps {
-			  sh '/home/prachi/Documents/devops-folder/apache-tomcat-9.0.76/bin/mvn install'
+			  sh '/home/prachi/Documents/devops-folder/apache-maven-3.9.3/bin/mvn install'
 	                 }}
 		stage('Deployment'){
 		    steps {
