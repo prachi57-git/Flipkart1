@@ -12,7 +12,7 @@ pipeline {
 	                 }}
 		stage('Deployment'){
 		    steps {
-			
+	
 		sh 'cp target/Flipkart1.war /home/prachi/Documents/devops-folder/apache-tomcat-9.0.76/webapps'         	}}
 	}}
 }}
